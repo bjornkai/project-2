@@ -4,6 +4,7 @@ const User = require('../../models/user-model');
 
 passport.use(new GoogleStrategy({
   clientID: process.env.googleClientID,
+  // clientID: "978518217202-iobt8q78l5n04khe88tnh2s0f6via2d3.apps.googleusercontent.com",
   clientSecret: process.env.googleClientSecret,
   callbackURL: '/google/callback',
   proxy: true 

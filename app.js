@@ -19,7 +19,7 @@ const session = require('express-session');
 const passportSetup = require('./config/passport/passport-setup');
 
 mongoose
-  .connect('mongodb://localhost/users-passport', {useNewUrlParser: true})
+  .connect('mongodb://localhost/project-2', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -55,7 +55,7 @@ app.use(require('node-sass-middleware')({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 

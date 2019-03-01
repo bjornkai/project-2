@@ -9,16 +9,15 @@
 <body>
 <nav>
   {{#if currentUser}}
-    <a href="/private">Super secret page</a>
+    <a href="/private">Profile</a>
     <a href="/jams/add">Create a Jam Session</a>
-    <a href="/rooms">Jam Sessions</a>
+    <a href="/jamsessions">Jam Sessions</a>
     <form action="/logout" method="post">
       <button type="submit">Logout</button>
     </form>
     {{else}}
     <a href="/signup">Signup</a>
     <a href="/login">Login</a>
-    {{!-- <a href="/slack-login">Login with Spotify</a> --}}
     <a href="/google-login">Login with Google</a>
   {{/if}}
   <a href="/public">Public page</a>

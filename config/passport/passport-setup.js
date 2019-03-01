@@ -3,7 +3,7 @@ const User = require('../../models/user-model');
 const flash = require('connect-flash');
 
 /////// REQUIRE ALL THE STRATEGIES ////////////
-require('./local-strategy');
+require('../local-strategy');
 require('./google-strategy');
 
 passport.serializeUser((user, cb) => {
