@@ -7,7 +7,7 @@ const User = require('../models/user-model');
 const fileUploader = require('../config/upload-setup/cloudinary');
 
 
-// GET route to display the form to create a room
+// GET route to display the form to create a jam session
 
 router.get('/jams/add', isLoggedIn, (req, res, next) => {
   res.render('jam-pages/addJam');

@@ -90,5 +90,6 @@ app.use('/', require('./routes/user-routes'));
 
 app.use('/', require('./routes/jam-routes'));
 
+app.use('/', require('./routes/review-routes'));
 
 module.exports = app;
