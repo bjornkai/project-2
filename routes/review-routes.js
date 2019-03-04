@@ -5,7 +5,9 @@ const Review = require('../models/review-model');
 
 
 // create a new review
-router.post('/jams/:jamId/add-review', (req, res, next) => {
+// http://localhost:3000/jamsessions/5c7abd171fb38043ccd1d337/add-review
+
+router.post('/jamsessions/:jamId/add-review', (req, res, next) => {
   // step 1: create a new review
   const newComment = {
     user: req.user._id,
@@ -37,6 +39,7 @@ router.post('/jams/:jamId/add-review', (req, res, next) => {
 // since we have saved reviews inside reviews collection and as array of ids in the jams' reviews,
 // we have to make sure when deleted, the review disappears from the reviews collection and from
 // the jam's reviews array
+
 router.post('/reviews/:id', (req, res, next) => {
   Review.findByIdAndDelete(req.params.id) // <--- deleting review from reviews collection
   .then(() => {
@@ -55,7 +58,7 @@ router.post('/reviews/:id', (req, res, next) => {
       // so that needs to be saved in the database)
       foundJam.save()
       .then(() => {
-        res.redirect(`/jams/${foundJam._id}`)
+        res.redirect(`/jamsessions/${foundJam._id}`)
       })
       .catch(err => next(err))
     })

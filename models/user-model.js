@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   email: String,
   password: String,
-  // spotifyID: String, <------------------------- add on for later (MAYBE)
   googleID: String,
   fullName: String,
   phone: String,

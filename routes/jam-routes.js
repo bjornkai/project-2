@@ -42,8 +42,30 @@ router.get('/jamsessions', isLoggedIn, (req, res, next) => {
   })
 })
 
+// GET REQUEST DETAILS PAGE FOR THE JAM SESSIONS
+
+router.get('/jams/:details', (req, res, next) =>{
+  Jam.findById(req.params.details).populate('reviews')
+  .populate({path: 'reviews', populate: {path: 'user'}})
+  .then(jamsFromDB => {
+    console.log('the user is : ', jamsFromDB.reviews.user)
+    res.render('jam-pages/jam-details', {jam: jamsFromDB})
+  })
+})
+
+//localhost:3000/jams/5c7744c5109b992cb3998a6e/update?
+
+router.get('/jams/:jamId/update', (req, res, next) => {
+  Jam.findById(req.params.jamId)
+    .then(foundJam =>{
+      res.render('jam-pages/jam-update', {jam: foundJam})
+    })
+    .catch( error => console.log('Error while getting the jam: ', error))
+})
+
 // post => save updates in the specific jam session
-router.post('/jamsession/:jamId/update', fileUploader.single('imageUrl'),(req, res, next) => {
+
+router.post('/jamsessions/:jamId/update', fileUploader.single('imageUrl'),(req, res, next) => {
 
   const { name, description } = req.body;
   const updatedJam = {
@@ -57,12 +79,15 @@ router.post('/jamsession/:jamId/update', fileUploader.single('imageUrl'),(req, r
                                                                 
   Jam.findByIdAndUpdate(req.params.jamId, updatedJam)
   .then( theUpdatedJam => {
-    res.redirect(`/jamsessions/${updatedJam._id}`);
+    //localhost:3000/jams/5c7744c5109b992cb3998a6e
+    console.log('this is the jam id: ', theUpdatedJam._id)
+    res.redirect(`/jams/${theUpdatedJam._id}`);
   } )
   .catch( err => next(err) )
 })
 
-// delete a specific jam session
+// DELETE A SPECIFIC JAM SESSION 
+
 router.post('/jamsessions/:id/delete', (req, res, next) => {
   Jam.findByIdAndDelete(req.params.id)
   .then(() => {

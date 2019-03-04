@@ -1,0 +1,15 @@
+<h1>Update the Jam Session Below</h1>
+
+<form id="form" action="/jamsessions/{{jam._id}}/update" method="post" id="edit-form" enctype='multipart/form-data'>
+    <label for="">Name</label>
+    <input type="text" name="name" id="" value="{{jam.name}}">
+
+    <label for="">Description</label>
+    <textarea name="description" id="" cols="30" rows="10"> {{jam.description}} </textarea>
+
+    <img src="{{jam.imageUrl}}" alt="" width="200">
+    <label for="">Upload new image</label>
+    <input type="file" name="imageUrl" id="">
+
+    <button type="submit">Save changes to the jam session</button>
+  </form>

@@ -1,51 +1,29 @@
-<h1>Welcome to the details page of the {{ jam.name }}</h1>
-<p>This jam session is posted by: <b> {{ jam.owner.fullName }} </b></p>
+<h1>More details about {{ jam.name }}</h1>
+<p>This jam session was created by <b> {{ jam.owner.fullName }} </b></p>
 <hr>
-<h3>Description:</h3>
+<h3>Description</h3>
 <p> {{ jam.description }}</p>
 <hr>
-<h3>Gallery:</h3>
+<h3>Location</h3>
 <img src="{{jam.imageUrl}}" alt="" width="300">
-
-{{#if jam.isOwner}}
-  <button id="toggle-button">Update jam session details</button>
-
-  <form action="/jams/{{jam._id}}/update" method="post" id="edit-form" hidden="true" 
-  enctype='multipart/form-data'>
-    <label for="">Name</label>
-    <input type="text" name="name" id="" value="{{jam.name}}">
-
-    <label for="">Description</label>
-    <textarea name="description" id="" cols="30" rows="10"> {{jam.description}} </textarea>
-
-    <img src="{{jam.imageUrl}}" alt="" width="200">
-    <label for="">Upload new image</label>
-    <input type="file" name="imageUrl" id="">
-
-    <button type="submit">Save changes to the jam session</button>
-  </form>
-{{/if}}
-
-<hr>
 
 {{!-- USER CAN NOT LEAVE REVIEWS ON THEIR OWN PROPERTIES --}}
 {{!-- this means that only if the user IS NOT the owner, this form will be shown --}}
 
 {{#unless jam.isOwner}}
-  <h2>Add a review:</h2>
-  <form action="/jams/{{jam._id}}/add-review" method="POST">
-    <textarea name="comment" id="" cols="10" rows="5"></textarea>
-    <button type="submit">Add</button>
-  </form>
+  <h2>Add a review</h2>
+    <form action="/jamsessions/{{jam._id}}/add-review" method="POST">
+      <textarea name="comment" id="" cols="10" rows="5"></textarea>
+      <button type="submit">Add</button>
+    </form>
 {{/unless}}
-
 
 {{!-- if there are reviews, show them, if not, never mind them --}}
 
 {{#if jam.reviews}}
-  <h3>Reviews:</h3>
+  <h3>What the jammers think:</h3>
   {{#each jam.reviews}}
-    <p> <b>{{ this.user.fullName }} said: </b> {{ this.comment }}  </p>
+    <p> <b>{{ this.user.fullName }}: </b> {{ this.comment }}  </p>
     {{#if this.canBeChanged}}
       <a href="/reviews/{{this._id}}">Edit</a>
       <form action="/reviews/{{this._id}}" method="POST">

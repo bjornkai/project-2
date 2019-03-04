@@ -61,7 +61,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // DEFAULT VALUE FOR TITLE LOCAL 
 
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Welcome to the Jam';
 
 // ACTIVATE FLASH IN THE ENTIRE APP
 // ACTIVATE EXPRESS SESSION
