@@ -60,7 +60,7 @@ router.post('/register', (req, res, next) => {
 //////////////// LOGIN /////////////////////
 
 router.get('/login', (req, res, next) => {
-  console.log("----------------", process.env.googleClientID)
+  // console.log("----------------", process.env.googleClientID)
   res.render('auth/login');
 })
 
