@@ -4,10 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
 </head>
 <body>
-<nav>
+<nav id="navbar">
+  <div>
   {{#if currentUser}}
     <a href="/private">Profile</a>
     <a href="/jams/add">Create a Jam Session</a>
@@ -22,6 +23,7 @@
     <a href="/google-login">Login with Google</a>
   {{/if}}
   <a href="/public">About</a>
+  </div>
 </nav>
   {{{body}}}
 

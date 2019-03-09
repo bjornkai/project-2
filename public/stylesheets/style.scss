@@ -1,14 +1,17 @@
 /* STYLING FOR THE WEB APP */
+
 #form {
   margin: 30px auto;
-  width: 380px; }
+  width: 380px;
+}
 
 #form label {
   color: #666;
   display: inline-block;
   margin-bottom: 10px;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+}
 
 #form input,
 #form button {
@@ -17,7 +20,8 @@
   outline: 0;
   padding: 4px;
   width: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 #form button {
   background: purple;
@@ -31,16 +35,18 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
-  width: 100%; }
+  width: 100%;
+}
 
 #form button:hover {
   background: #fff;
   color: #43a3e6;
-  transition: .3s ease background; }
+  transition: .3s ease background;
+}
 
 #navbar {
   float: right;
-  border-color: white;
-  overflow: visible; }
 
-/*# sourceMappingURL=style.css.map */
+  border-color: white;
+  overflow: visible;
+}
