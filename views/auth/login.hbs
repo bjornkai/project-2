@@ -1,6 +1,7 @@
-<h1>Login</h1>
+<h1 id="header">Login</h1>
 
-<form action="/login" method="POST">
+<div id="login-form">
+<form id="form" action="/login" method="POST">
 
   <label for="">Email:</label>
   <input type="text" name="email" id="" >
@@ -10,5 +11,6 @@
   
   <button type="submit">Login</button>
 </form>
+</div>
 
 {{> flashMessage}}

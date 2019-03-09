@@ -1,5 +1,9 @@
 /* STYLING FOR THE WEB APP */
 
+body {
+  font-family: 'Montserrat', 'sans-serif';
+}
+
 #form {
   margin: 30px auto;
   width: 380px;
@@ -46,7 +50,28 @@
 
 #navbar {
   float: right;
-
   border-color: white;
   overflow: visible;
 }
+
+#header {
+  border-bottom: 4px solid purple;
+  width: fit-content;
+  text-align: center;
+  margin: 40px auto 90px auto;
+  font-size: 35px;
+  font-weight: 1200;
+}
+
+.about-header {
+
+}
+
+.about-text {
+
+}
+
+// #login-form {
+  
+// }
+
