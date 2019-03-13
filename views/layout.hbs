@@ -9,23 +9,26 @@
 </head>
 <body>
 <nav id="navbar">
-  <div>
+  <div id="nav-right">
   {{#if currentUser}}
     <a href="/private">Profile</a>
     <a href="/jams/add">Create a Jam Session</a>
     <a href="/jamsessions">Jam Sessions</a>
+    <a href="/public">About</a>
     <form action="/logout" method="post">
-      <button type="submit">Logout</button>
+      <button id="logout-button" type="submit">Logout</button>
     </form>
     {{else}}
     <a href="/signup">Signup</a>
     <a href="/login">Login</a>
     <a href="/google-login">Login with Google</a>
   {{/if}}
-  <a href="/public">About</a>
   </div>
 </nav>
   {{{body}}}
+
+
+  <footer></footer>
 
   <script src="/javascripts/script.js"></script>
 </body>

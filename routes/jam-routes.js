@@ -47,8 +47,10 @@ router.get('/jamsessions', isLoggedIn, (req, res, next) => {
 router.get('/jams/:details', (req, res, next) =>{
   Jam.findById(req.params.details).populate('reviews')
   .populate({path: 'reviews', populate: {path: 'user'}})
+  .populate('owner')
   .then(jamsFromDB => {
-    console.log('the user is : ', jamsFromDB.reviews.user)
+    // console.log('the user is : ', jamsFromDB.reviews.user)
+    // console.log('this is the owner: ', jamsFromDB.owner)
     res.render('jam-pages/jam-details', {jam: jamsFromDB})
   })
 })

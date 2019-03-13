@@ -1,6 +1,13 @@
 /* STYLING FOR THE WEB APP */
 body {
-  font-family: 'Montserrat', 'sans-serif'; }
+  font-family: 'Montserrat', 'sans-serif';
+  height: 100%;
+  background-image: url("../images/drums1.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
 
 #form {
   margin: 30px auto;
@@ -41,17 +48,43 @@ body {
   color: #43a3e6;
   transition: .3s ease background; }
 
+#logout-button {
+  color: purple;
+  background-color: transparent;
+  border: none;
+  border-bottom: purple; }
+
 #navbar {
-  float: right;
   border-color: white;
-  overflow: visible; }
+  overflow: visible;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: 12px; }
+
+#nav-right {
+  float: right; }
+
+#nav-right form {
+  display: inline;
+  margin-right: 0%; }
 
 #header {
+  color: white;
   border-bottom: 4px solid purple;
   width: fit-content;
   text-align: center;
   margin: 40px auto 90px auto;
   font-size: 35px;
-  font-weight: 1200; }
+  font-weight: 1200;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px; }
+
+#jam-list {
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
