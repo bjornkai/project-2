@@ -8,17 +8,21 @@
 <p> {{ jam.description }}</p>
 <br>
 <h3 id="header">Location</h3>
-<img src="{{jam.imageUrl}}" alt="" id="images" width="300">
+<div class="images-details">
+<img src="{{jam.imageUrl}}" alt="" width="300">
+</div>
 
 {{!-- USER CAN NOT LEAVE REVIEWS ON THEIR OWN PROPERTIES --}}
 {{!-- this means that only if the user IS NOT the owner, this form will be shown --}}
 
 {{#unless jam.isOwner}}
   <h2 id="header">Add a review</h2>
+  <div class="review-add">
     <form action="/jamsessions/{{jam._id}}/add-review" method="POST">
       <textarea name="comment" id="text-area" cols="60" rows="5"></textarea>
-      <button class="review-add" type="submit">Add</button>
+      <button type="submit">Add</button>
     </form>
+  </div>
 {{/unless}}
 
 {{!-- if there are reviews, show them, if not, never mind them --}}

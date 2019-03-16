@@ -17,6 +17,10 @@ p {
   text-align:center;
 }
 
+.p-landing-page {
+  font-size: 100px;
+}
+
 h3 {
   color: mediumpurple;
 }
@@ -29,6 +33,7 @@ h3 {
 a {
   text-decoration: none;
   text-transform: uppercase;
+  color: mediumpurple;
 }
 
 #text-area {
@@ -88,10 +93,10 @@ a {
   color: mediumpurple;
   border-bottom: mediumpurple;
   font-family: 'Montserrat', 'sans-serif';
+  text-transform: uppercase;
 }
 
 #navbar {
-  // float: right;
   border-color: white;
   overflow: visible;
   padding-top: 15px;
@@ -123,13 +128,6 @@ a {
   padding-left: 15px;
 }
 
-#jam-container {
-  // display: inline-block;
-  // margin-bottom: 10px;
-  // text-align: inherit;
-  // width: 100%;
-}
-
 nav img {
   height: 80px;
   padding: -10px;
@@ -158,4 +156,18 @@ nav img {
 
 #nav-right > strong > a {
   color: mediumpurple;
+}
+
+.images-details {
+  display: flex;
+  justify-content: center;
+}
+
+.images-details img 
+  {max-height:100%; 
+  align-self: center;
+  }
+
+.review-add {
+  align-self: center;
 }

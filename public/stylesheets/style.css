@@ -14,6 +14,9 @@ p {
   color: white;
   text-align: center; }
 
+.p-landing-page {
+  font-size: 100px; }
+
 h3 {
   color: mediumpurple; }
 
@@ -24,7 +27,7 @@ h3 {
 a {
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center; }
+  color: mediumpurple; }
 
 #text-area {
   display: block;
@@ -75,7 +78,8 @@ a {
   border: none;
   color: mediumpurple;
   border-bottom: mediumpurple;
-  font-family: 'Montserrat', 'sans-serif'; }
+  font-family: 'Montserrat', 'sans-serif';
+  text-transform: uppercase; }
 
 #navbar {
   border-color: white;
@@ -128,5 +132,16 @@ nav img {
 
 #nav-right > strong > a {
   color: mediumpurple; }
+
+.images-details {
+  display: flex;
+  justify-content: center; }
+
+.images-details img {
+  max-height: 100%;
+  align-self: center; }
+
+.review-add {
+  align-self: center; }
 
 /*# sourceMappingURL=style.css.map */
