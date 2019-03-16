@@ -17,9 +17,6 @@ p {
 .p-landing-page {
   font-size: 100px; }
 
-h3 {
-  color: mediumpurple; }
-
 #user-profile {
   color: white;
   text-align: center; }
@@ -142,6 +139,8 @@ nav img {
   align-self: center; }
 
 .review-add {
+  display: flex;
+  justify-content: center;
   align-self: center; }
 
 /*# sourceMappingURL=style.css.map */

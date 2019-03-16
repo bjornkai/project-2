@@ -5,7 +5,7 @@
 <div id="jam-container">
   {{#each jamsFromDB}}
   <div class="jam-card">
-    <h3> <a href="/jams/{{this._id}}">{{this.name}}</a> </h3>
+    <h3>  <a href="/jams/{{this._id}}">{{this.name}}</a> </h3>
     <img src="{{this.imageUrl}}" alt="" width="300">
     <div class="jam-card-buttons">
     {{#if this.isOwner}}

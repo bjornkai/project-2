@@ -21,9 +21,12 @@ p {
   font-size: 100px;
 }
 
-h3 {
-  color: mediumpurple;
-}
+// h3 {
+//   color: mediumpurple;
+//   display: flex;
+//   justify-content: center;
+//   // align-self: center;
+// }
 
 #user-profile {
   color: white;
@@ -169,5 +172,7 @@ nav img {
   }
 
 .review-add {
+  display: flex;
+  justify-content: center;
   align-self: center;
 }

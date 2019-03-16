@@ -5,10 +5,13 @@
     <input type="text" name="name" id="" value="{{jam.name}}">
 
     <label for="">Description</label>
-    <textarea name="description" id="" cols="30" rows="10"> {{jam.description}} </textarea>
+    <textarea name="description" id="" cols="60" rows="5"> {{jam.description}} </textarea>
 
-    <img src="{{jam.imageUrl}}" alt="" width="200">
+    <br>
+    <br>
+
     <label for="">Upload new image</label>
+    <img src="{{jam.imageUrl}}" width="380" class="images-details">
     <input type="file" name="imageUrl" id="">
 
     <button type="submit">Save changes to the jam session</button>
