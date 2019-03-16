@@ -9,7 +9,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  text-decoration: none;
+}
 
+p {
+  color:white;
+  text-align:center;
+}
+
+ul {
+  columns: 3 auto;
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  color: white;
+}
+
+#user-profile {
+  color: white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#text-area {
+  height:auto;
+  width:auto;
+  float:center;
+}
+
+#images {
+  display: inline;
 }
 
 #form {
@@ -18,7 +50,7 @@ body {
 }
 
 #form label {
-  color: #666;
+  color: white;
   display: inline-block;
   margin-bottom: 10px;
   text-align: center;
@@ -57,10 +89,11 @@ body {
 }
 
 #logout-button {
-  color: purple;
   background-color: transparent;
   border: none;
-  border-bottom: purple;
+  color: rebeccapurple;
+  border-bottom: rebeccapurple;
+  font-family: 'Montserrat', 'sans-serif';
 }
 
 #navbar {
@@ -70,7 +103,8 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-  font-size: 12px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 
@@ -98,16 +132,18 @@ body {
 #jam-list {
   display: inline-block;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: inherit;
   width: 100%;
+
 }
 
-.about-header {
-
+nav img {
+  height: 80px;
+  padding: -10px;
 }
 
 .about-text {
-
+  text-align: center;
+  color: white;
 }
-
 

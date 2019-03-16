@@ -1,16 +1,18 @@
 <h1 id="header">Jam Sessions</h1>
 
-<ul id=>
+<br> 
+
+<ul id="jam-list">
   {{#each jamsFromDB}}
   <li> 
     <h3> <a href="/jams/{{this._id}}">{{this.name}}</a> </h3>
     {{!-- <a href="/rooms/{{this._id}}"> {{ this.name }} </a> --}}
     <img src="{{this.imageUrl}}" alt="" width="300">
     {{#if this.isOwner}}
-      <form action="/jams/{{this._id}}/update">
+      <form id="delete-update" action="/jams/{{this._id}}/update">
         <button type="submit">Update</button>
       </form>
-      <form action="/jams/{{this._id}}/delete">
+      <form id="delete-update" action="/jams/{{this._id}}/delete">
         <button type="submit">Delete</button>
       </form>
     {{/if}}

@@ -3,12 +3,12 @@
 <br>
 <h1 id="header">More details about {{ jam.name }}</h1>
 <p>This jam session was created by <b> {{ jam.owner.fullName }} </b></p>
-<hr>
+<br>
 <h3 id="header">Description</h3>
 <p> {{ jam.description }}</p>
-<hr>
+<br>
 <h3 id="header">Location</h3>
-<img src="{{jam.imageUrl}}" alt="" width="300">
+<img src="{{jam.imageUrl}}" alt="" id="images" width="300">
 
 {{!-- USER CAN NOT LEAVE REVIEWS ON THEIR OWN PROPERTIES --}}
 {{!-- this means that only if the user IS NOT the owner, this form will be shown --}}
@@ -16,7 +16,7 @@
 {{#unless jam.isOwner}}
   <h2 id="header">Add a review</h2>
     <form action="/jamsessions/{{jam._id}}/add-review" method="POST">
-      <textarea name="comment" id="" cols="10" rows="5"></textarea>
+      <textarea name="comment" id="text-area" cols="10" rows="5"></textarea>
       <button type="submit">Add</button>
     </form>
 {{/unless}}

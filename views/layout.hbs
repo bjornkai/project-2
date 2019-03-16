@@ -9,8 +9,10 @@
 </head>
 <body>
 <nav id="navbar">
+  <img src="http://africanspirit.space/en/resources/icons/icon-Bolamba.png">
   <div id="nav-right">
   {{#if currentUser}}
+  <strong>
     <a href="/private">Profile</a>
     <a href="/jams/add">Create a Jam Session</a>
     <a href="/jamsessions">Jam Sessions</a>
@@ -23,6 +25,7 @@
     <a href="/login">Login</a>
     <a href="/google-login">Login with Google</a>
   {{/if}}
+  </strong>
   </div>
 </nav>
   {{{body}}}

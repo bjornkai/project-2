@@ -7,14 +7,41 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  text-decoration: none; }
+
+p {
+  color: white;
+  text-align: center; }
+
+ul {
+  columns: 3 auto;
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  color: white; }
+
+#user-profile {
+  color: white;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
+#text-area {
+  height: auto;
+  width: auto;
+  float: center; }
+
+#images {
+  display: inline; }
 
 #form {
   margin: 30px auto;
   width: 380px; }
 
 #form label {
-  color: #666;
+  color: white;
   display: inline-block;
   margin-bottom: 10px;
   text-align: center;
@@ -49,10 +76,11 @@ body {
   transition: .3s ease background; }
 
 #logout-button {
-  color: purple;
   background-color: transparent;
   border: none;
-  border-bottom: purple; }
+  color: rebeccapurple;
+  border-bottom: rebeccapurple;
+  font-family: 'Montserrat', 'sans-serif'; }
 
 #navbar {
   border-color: white;
@@ -60,7 +88,8 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-  font-size: 12px; }
+  font-size: 14px;
+  text-decoration: none; }
 
 #nav-right {
   float: right; }
@@ -84,7 +113,15 @@ body {
 #jam-list {
   display: inline-block;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: inherit;
   width: 100%; }
+
+nav img {
+  height: 80px;
+  padding: -10px; }
+
+.about-text {
+  text-align: center;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
