@@ -17,12 +17,8 @@ p {
   text-align:center;
 }
 
-ul {
-  columns: 3 auto;
-  list-style: none;
-  display: inline;
-  text-transform: uppercase;
-  color: white;
+h3 {
+  color: mediumpurple;
 }
 
 #user-profile {
@@ -32,17 +28,15 @@ ul {
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 #text-area {
-  height:auto;
-  width:auto;
-  float:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#images {
-  display: inline;
-}
 
 #form {
   margin: 30px auto;
@@ -68,8 +62,8 @@ a {
 }
 
 #form button {
-  background: purple;
-  border: 1px solid purple;
+  background: mediumpurple;
+  border: 1px mediumpurple;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
@@ -91,8 +85,8 @@ a {
 #logout-button {
   background-color: transparent;
   border: none;
-  color: rebeccapurple;
-  border-bottom: rebeccapurple;
+  color: mediumpurple;
+  border-bottom: mediumpurple;
   font-family: 'Montserrat', 'sans-serif';
 }
 
@@ -118,7 +112,7 @@ a {
 
 #header {
   color: white;
-  border-bottom: 4px solid purple;
+  border-bottom: 4px solid mediumpurple;
   width: fit-content;
   text-align: center;
   margin: 40px auto 90px auto;
@@ -129,12 +123,11 @@ a {
   padding-left: 15px;
 }
 
-#jam-list {
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: inherit;
-  width: 100%;
-
+#jam-container {
+  // display: inline-block;
+  // margin-bottom: 10px;
+  // text-align: inherit;
+  // width: 100%;
 }
 
 nav img {
@@ -147,3 +140,22 @@ nav img {
   color: white;
 }
 
+#jam-container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.jam-card {
+  height: 60vh;
+  width: 30vw;
+}
+
+.jam-card-buttons {
+  display: flex;
+}
+
+#nav-right > strong > a {
+  color: mediumpurple;
+}

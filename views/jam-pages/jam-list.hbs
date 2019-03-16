@@ -2,12 +2,12 @@
 
 <br> 
 
-<ul id="jam-list">
+<div id="jam-container">
   {{#each jamsFromDB}}
-  <li> 
+  <div class="jam-card">
     <h3> <a href="/jams/{{this._id}}">{{this.name}}</a> </h3>
-    {{!-- <a href="/rooms/{{this._id}}"> {{ this.name }} </a> --}}
     <img src="{{this.imageUrl}}" alt="" width="300">
+    <div class="jam-card-buttons">
     {{#if this.isOwner}}
       <form id="delete-update" action="/jams/{{this._id}}/update">
         <button type="submit">Update</button>
@@ -16,6 +16,7 @@
         <button type="submit">Delete</button>
       </form>
     {{/if}}
-  </li>
+    </div>
+  </div>
   {{/each}}
-</ul>
+</div>

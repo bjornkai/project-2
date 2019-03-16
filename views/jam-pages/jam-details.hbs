@@ -16,8 +16,8 @@
 {{#unless jam.isOwner}}
   <h2 id="header">Add a review</h2>
     <form action="/jamsessions/{{jam._id}}/add-review" method="POST">
-      <textarea name="comment" id="text-area" cols="10" rows="5"></textarea>
-      <button type="submit">Add</button>
+      <textarea name="comment" id="text-area" cols="60" rows="5"></textarea>
+      <button class="review-add" type="submit">Add</button>
     </form>
 {{/unless}}
 
